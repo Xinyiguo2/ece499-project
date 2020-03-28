@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ece499-online-adventrue/static/css/main.28890d62.chunk.css",
+    "main.js": "/ece499-online-adventrue/static/js/main.8ecdd4ee.chunk.js",
+    "main.js.map": "/ece499-online-adventrue/static/js/main.8ecdd4ee.chunk.js.map",
+    "runtime-main.js": "/ece499-online-adventrue/static/js/runtime-main.aeec8515.js",
+    "runtime-main.js.map": "/ece499-online-adventrue/static/js/runtime-main.aeec8515.js.map",
+    "static/js/2.800c4aef.chunk.js": "/ece499-online-adventrue/static/js/2.800c4aef.chunk.js",
+    "static/js/2.800c4aef.chunk.js.map": "/ece499-online-adventrue/static/js/2.800c4aef.chunk.js.map",
+    "index.html": "/ece499-online-adventrue/index.html",
+    "precache-manifest.3c03815bbcee97a1ce5521590fa5e83f.js": "/ece499-online-adventrue/precache-manifest.3c03815bbcee97a1ce5521590fa5e83f.js",
+    "service-worker.js": "/ece499-online-adventrue/service-worker.js",
+    "static/css/main.28890d62.chunk.css.map": "/ece499-online-adventrue/static/css/main.28890d62.chunk.css.map",
+    "static/js/2.800c4aef.chunk.js.LICENSE.txt": "/ece499-online-adventrue/static/js/2.800c4aef.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aeec8515.js",
+    "static/js/2.800c4aef.chunk.js",
+    "static/css/main.28890d62.chunk.css",
+    "static/js/main.8ecdd4ee.chunk.js"
+  ]
+}
