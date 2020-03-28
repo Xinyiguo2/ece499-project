@@ -30,6 +30,7 @@ class Map extends Component {
         this.actionTwo = this.actionTwo.bind(this);
         this.actionFourPt2 = this.actionFourPt2.bind(this);
         this.actionSix = this.actionSix.bind(this);
+        this.finalAction = this.finalAction.bind(this);
     }
 
     selectMode (btnClicked) {
@@ -84,6 +85,11 @@ class Map extends Component {
         this.setState({
             stringSix: event.target.value
         })
+    }
+
+    finalAction (event) {
+        //check if success or not 
+        alert("yes!!")
     }
  
     render () {
@@ -166,7 +172,7 @@ class Map extends Component {
                         <div className="item-odd" id="sev">
                         </div>
                         <div className="item-odd" id="eig">
-                            <Button id="final" size="large" variant="contained" color="secondary"> <h2>Finish</h2></Button>
+                            <Button id="final" size="large" variant="contained" color="secondary" onClick={this.finalAction}> <h2>Finish</h2></Button>
                         </div>
                         <div className="item-odd" id="nin">
                         </div>
@@ -177,4 +183,8 @@ class Map extends Component {
     }
 }
 
+
+// TODO: 
+// chanllenge for 1 and 5 : add modal to it 
+// add voices 
 export default Map;
