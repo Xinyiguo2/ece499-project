@@ -1,0 +1,12 @@
+on first landing, the robot will talk to the user for a pre-defined selected mode 
+6 tasks:
+1 - Why do you choose UIUC as your alma? (answer doesnt matter, just a question to throw meme or not)
+2 - ask the user to complete ILL- , here the robot will speak to the user 'ILL' and expecting the user to type 'INI'
+3 - here the robot will expect the user to select the number 20 
+4 - the robot will ask the user to select both boxes at first, then uncheck the bottom one 
+5 - ask for the weather, dont matter what answer is, but to start a conversation + meme 
+6 - ask the user to enter his/her name for a raffle for a bag of chosen cookie.
+7 - finish -> submit user's answer and check for the requirement above. 
+
+- if user follows the instructions correctly, it will shows a cute robot ET pic 
+- otherwise, it'd be a scary robot pic

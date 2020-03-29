@@ -6,6 +6,11 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import RegularModalOne from './regularModalOne';
+import HumorModal from './humorModal';
+import ConversationalModal from './conversationModal';
+import RegularModalTwo from './regularModalTwo';
+import Modal from '@material-ui/core/Modal';
 
 class Map extends Component {
 
@@ -21,39 +26,51 @@ class Map extends Component {
             string: "",
             checked: false,
             checkedpt2: false,
-            stringSix: ""
+            stringSix: "",
+            clickedForModalOneRegular: false,
+            clickedForModalOneHumor: false,
+            clickedForModalTwoRegular: false,
+            clickedForModalTwoConversation: false
         }
 
-        this.selectMode = this.selectMode.bind(this);
+        this.selectModeOne = this.selectModeOne.bind(this);
+        this.selectModeTwo = this.selectModeTwo.bind(this);
+        this.selectModeThree = this.selectModeThree.bind(this);
         this.actionThree = this.actionThree.bind(this);
         this.actionFour = this.actionFour.bind(this);
         this.actionTwo = this.actionTwo.bind(this);
         this.actionFourPt2 = this.actionFourPt2.bind(this);
         this.actionSix = this.actionSix.bind(this);
         this.finalAction = this.finalAction.bind(this);
+        this.modalActionOne = this.modalActionOne.bind(this);
+        this.closeModalOne = this.closeModalOne.bind(this);
+        this.closeModalTwo = this.closeModalTwo.bind(this);
+        this.modalActionTwo = this.modalActionTwo.bind(this);
     }
 
-    selectMode (btnClicked) {
-        if (btnClicked.target.id === 1) {
-            this.setState({
-                select: true,
-                selectedMode: 1,
-                progress: 0
-            })
-        } else if (btnClicked.target.id === 2) {
-            this.setState({
-                select: true,
-                selectedMode: 2,
-                progress: 0
-            })
-        } else {
-            this.setState({
-                select: true,
-                selectedMode: 3,
-                progress: 0
-            })
-        }
+    selectModeOne (btnClicked) {
+        this.setState({
+            select: true,
+            selectedMode: 1,
+            progress: 0
+        })
     } 
+
+    selectModeTwo (btnClicked) {
+        this.setState({
+            select: true,
+            selectedMode: 2,
+            progress: 0
+        })
+    }
+
+    selectModeThree (btnClicked) {
+        this.setState({
+            select: true,
+            selectedMode: 3,
+            progress: 0
+        })
+    }
 
     actionThree (value) {
         this.setState({
@@ -91,6 +108,46 @@ class Map extends Component {
         //check if success or not 
         alert("yes!!")
     }
+
+    modalActionOne (event) {
+        if (this.state.selectedMode === 2) { // 2 is for humor 
+            this.setState({
+                clickedForModalOneHumor: true
+            })
+        } else {
+            this.setState({
+                clickedForModalOneRegular: true
+            })
+        }
+        console.log(this.state.selectedMode)
+    }
+
+    closeModalOne (event) {
+        this.setState({
+            clickedForModalOneHumor: false,
+            clickedForModalOneRegular: false
+        })
+    }
+
+    modalActionTwo (event) {
+        if (this.state.selectedMode === 3) { // 3 is for convsersation 
+            this.setState({
+                clickedForModalTwoConversation: true
+            })
+        } else {
+            this.setState({
+                clickedForModalTwoRegular: true
+            })
+        }
+    }
+
+    closeModalTwo (event) {
+        this.setState({
+            clickedForModalTwoRegular: false,
+            clickedForModalTwoConversation: false
+        })
+    }
+    
  
     render () {
         if (this.state.select === false) {
@@ -101,17 +158,17 @@ class Map extends Component {
                     </div>
                     <div className="container">
                         <div className="container-inside">
-                            <Button id="1" variant="outlined" color="primary" onClick={this.selectMode}>
+                            <Button id="1" variant="outlined" color="primary" onClick={this.selectModeOne}>
                                 1
                             </Button>
                         </div>
                         <div className="container-inside">
-                            <Button id="2" variant="outlined" color="secondary" onClick={this.selectMode}>
+                            <Button id="2" variant="outlined" color="secondary" onClick={this.selectModeTwo}>
                                 2
                             </Button>
                         </div>
                         <div className="container-inside">
-                            <Button id="3" variant="outlined" onClick={this.selectMode}>
+                            <Button id="3" variant="outlined" onClick={this.selectModeThree}>
                                 3
                             </Button>
                         </div>
@@ -126,7 +183,23 @@ class Map extends Component {
                     </div>
                     <div className="container-grid">
                         <div className="item-even" id="one">
-                            <Button id="first" size="large" variant="outlined" color="secondary"> <h2> 1 </h2></Button>
+                            <Button id="first" size="large" variant="outlined" color="secondary" onClick={this.modalActionOne}> <h2> 1 </h2></Button>
+                            <Modal 
+                             open={this.state.clickedForModalOneRegular}
+                             onClose={this.closeModalOne}
+                             >
+                                  <div className="modalBackground">
+                                      <div>Which campus builidng is your favorite One?</div>
+                                      <img src="https://chemistry.illinois.edu/sites/default/files/inline-images/uiuc%20campus_0.png" alt="campus" width="100%" height="100%"></img>
+                                      <Button> CLOSE HERE</Button>
+                                  </div>
+                             </Modal>
+                             <Modal 
+                             open={this.state.clickedForModalOneHumor}
+                             onClose={this.closeModalOne}
+                             >
+                                  <HumorModal />
+                             </Modal>
                         </div>
                         <div className="item-odd" id="two">
                             <TextField id="second-input" variant="outlined" label="type here" onChange={this.actionTwo}></TextField>
@@ -163,19 +236,27 @@ class Map extends Component {
                             />
                         </div>
                         <div className="item-even" id="fiv">
-                            <Button id="fifth" size="large" variant="outlined" color="secondary"> <h2>5</h2></Button>
+                            <Button id="fifth" size="large" variant="outlined" color="secondary" onClick={this.modalActionTwo}> <h2>5</h2></Button>
+                            <Modal 
+                             open={this.state.clickedForModalTwoRegular}
+                             onClose={this.closeModalTwo}
+                             >
+                                  <RegularModalTwo />
+                             </Modal>
+                             <Modal 
+                             open={this.state.clickedForModalTwoConversation}
+                             onClose={this.closeModalTwo}
+                             >
+                                  <ConversationalModal />
+                             </Modal>
                         </div>
                         <div className="item-odd" id="six">
                             <TextField id="sixth-input" variant="outlined" label="enter here!" onChange={this.actionSix}></TextField>
                             <Button id="sixth" size="large" variant="outlined" color="secondary"> <h2>Done</h2></Button>
                         </div>
-                        <div className="item-odd" id="sev">
-                        </div>
-                        <div className="item-odd" id="eig">
-                            <Button id="final" size="large" variant="contained" color="secondary" onClick={this.finalAction}> <h2>Finish</h2></Button>
-                        </div>
-                        <div className="item-odd" id="nin">
-                        </div>
+                    </div>
+                    <div className="container-grid">
+                        <Button id="final" size="large" variant="contained" color="secondary" onClick={this.finalAction}> <h2>Finish</h2></Button>   
                     </div>
                 </div>
             )
