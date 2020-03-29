@@ -6,10 +6,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import RegularModalOne from './regularModalOne';
-import HumorModal from './humorModal';
-import ConversationalModal from './conversationModal';
-import RegularModalTwo from './regularModalTwo';
 import Modal from '@material-ui/core/Modal';
 
 class Map extends Component {
@@ -30,7 +26,9 @@ class Map extends Component {
             clickedForModalOneRegular: false,
             clickedForModalOneHumor: false,
             clickedForModalTwoRegular: false,
-            clickedForModalTwoConversation: false
+            clickedForModalTwoConversation: false,
+            thoughtForCampus: "",
+            weather: ""
         }
 
         this.selectModeOne = this.selectModeOne.bind(this);
@@ -46,6 +44,8 @@ class Map extends Component {
         this.closeModalOne = this.closeModalOne.bind(this);
         this.closeModalTwo = this.closeModalTwo.bind(this);
         this.modalActionTwo = this.modalActionTwo.bind(this);
+        this.actionModalOneReg = this.actionModalOneReg.bind(this);
+        this.actionModalTwoReg = this.actionModalTwoReg.bind(this);
     }
 
     selectModeOne (btnClicked) {
@@ -104,11 +104,6 @@ class Map extends Component {
         })
     }
 
-    finalAction (event) {
-        //check if success or not 
-        alert("yes!!")
-    }
-
     modalActionOne (event) {
         if (this.state.selectedMode === 2) { // 2 is for humor 
             this.setState({
@@ -148,7 +143,24 @@ class Map extends Component {
         })
     }
     
- 
+    actionModalOneReg (event) {
+        this.setState({
+            thoughtForCampus: event.target.value
+        })
+    }
+    
+    actionModalTwoReg (event) {
+        this.setState({
+            weather: event.target.value
+        })
+    }
+
+    finalAction (event) {
+        //check if success or not 
+        alert("yes!!")
+    }
+
+    
     render () {
         if (this.state.select === false) {
             return (
@@ -189,16 +201,22 @@ class Map extends Component {
                              onClose={this.closeModalOne}
                              >
                                   <div className="modalBackground">
-                                      <div>Which campus builidng is your favorite One?</div>
                                       <img src="https://chemistry.illinois.edu/sites/default/files/inline-images/uiuc%20campus_0.png" alt="campus" width="100%" height="100%"></img>
-                                      <Button> CLOSE HERE</Button>
+                                      <div className="interModalDialogBox"> <h2> What do you think of our campus?</h2></div>
+                                      <TextField id="modalOneAnswer" variant="outlined" label="answer here" onChange={this.actionModalOneReg} ></TextField>
+                                      <Button id="modalOneRegBtn" size="large" variant="outlined" onClick={this.closeModalOne}> <h3>Submit My Thought</h3></Button>
                                   </div>
                              </Modal>
                              <Modal 
                              open={this.state.clickedForModalOneHumor}
                              onClose={this.closeModalOne}
                              >
-                                  <HumorModal />
+                                <div className="modalBackground">
+                                    <img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/91026879_10163216068680125_8930716590257733632_n.jpg?_nc_cat=111&_nc_sid=ca434c&_nc_ohc=h1YuNUdyPOcAX8ky6y-&_nc_ht=scontent-ort2-1.xx&oh=bf2cb3314f9953682312447e656a0b1c&oe=5EA78F8D" alt="campus-meme" width="100%" height="100%"></img>
+                                    <div className="interModalDialogBox"><h2>What do you think of our campus?</h2></div>
+                                    <TextField id="modalOneAnswer" variant="outlined" label="answer here" onChange={this.actionModalOneReg} ></TextField>
+                                    <Button id="modalOneRegBtn" size="large" variant="outlined" onClick={this.closeModalOne}> <h3>Submit My Thought</h3></Button>
+                                </div>
                              </Modal>
                         </div>
                         <div className="item-odd" id="two">
@@ -241,13 +259,23 @@ class Map extends Component {
                              open={this.state.clickedForModalTwoRegular}
                              onClose={this.closeModalTwo}
                              >
-                                  <RegularModalTwo />
+                                <div className="modalBackground">
+                                    <img src="https://openweathermap.org/themes/openweathermap/assets/img/new-history-forecast-bulk.png" alt="weather" width="100%" height="100%"></img>
+                                    <div className="interModalDialogBox"><h2>How's the weather? </h2></div>
+                                    <TextField id="modalTwoAnswer" variant="outlined" label="Answer here!" onChange={this.actionModalTwoReg}></TextField>
+                                    <Button id="modalTwoRegBtn" size="large" variant="outlined" onClick={this.closeModalTwo}><h3>Submit My Answer</h3></Button>
+                                </div>
                              </Modal>
                              <Modal 
                              open={this.state.clickedForModalTwoConversation}
                              onClose={this.closeModalTwo}
                              >
-                                  <ConversationalModal />
+                                <div className="modalBackground">
+                                    <img src="https://i.redd.it/6361c94kl6i21.jpg" alt="weather-meme" width="100%" height="100%"></img>
+                                    <div className="interModalDialogBox"><h2>How's the weather? </h2></div>
+                                    <TextField id="modalTwoAnswer" variant="outlined" label="Answer here!" onChange={this.actionModalTwoReg}></TextField>
+                                    <Button id="modalTwoMemeBtn" size="large" variant="outlined" onClick={this.closeModalTwo}><h3>Submit My Answer</h3></Button>
+                                </div>
                              </Modal>
                         </div>
                         <div className="item-odd" id="six">

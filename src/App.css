@@ -92,5 +92,11 @@
 }
 
 .modalBackground {
-  background-color: salmon;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+.interModalDialogBox {
+  background-color: thistle;
 }
