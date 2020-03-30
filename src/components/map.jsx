@@ -312,7 +312,7 @@ class Map extends Component {
                         >
                             <div className="modalBackground">
                                 <img src="https://img.women.com/images/images/000/077/301/large/E.T..jpg?1489354835" alt="cute-et" width="100%" height="300px"></img>
-                                <Button size="large" variant="outlined" onClick={this.finish}><h2>Click Here To Exit! Bye Bye!</h2></Button>
+                                <Button size="large" variant="outlined" onClick={this.finish}><h2>Click Here To Exit! You Naughty Boy! </h2></Button>
                             </div>
                         </Modal>
                         <Modal 
@@ -321,7 +321,7 @@ class Map extends Component {
                         >
                             <div className="modalBackground">
                                 <img src="https://lh3.googleusercontent.com/proxy/YAw5Z6Q_WHFjyeVLMMtHMFSvsnrdJfSTK3zkvUxnEEnq_Y7r4UuSpdccAqIs5QG9QRMe_IDd1gtNV_CuyLe1l6jSdp8DbonAWZBfB7FGTCINe33SGf-_AH8" alt="cute-et" width="100%" height="500px"></img>
-                                <Button size="large" variant="outlined" onClick={this.finish}><h2>Click Here To Exit! Bye Bye!</h2></Button>
+                                <Button size="large" variant="outlined" onClick={this.finish}><h2>Click Here To Exit! You Successful!</h2></Button>
                             </div>
                         </Modal>
                     </div>
