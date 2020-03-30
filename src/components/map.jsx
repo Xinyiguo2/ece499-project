@@ -46,6 +46,7 @@ class Map extends Component {
         this.modalActionTwo = this.modalActionTwo.bind(this);
         this.actionModalOneReg = this.actionModalOneReg.bind(this);
         this.actionModalTwoReg = this.actionModalTwoReg.bind(this);
+        this.finish = this.finish.bind(this);
     }
 
     selectModeOne (btnClicked) {
@@ -156,8 +157,28 @@ class Map extends Component {
     }
 
     finalAction (event) {
+        this.setState({
+            finished: true
+        })
         //check if success or not 
-        alert("yes!!")
+        if (this.state.weather !== "" &&
+            this.state.string === "INI" &&
+            this.state.number === 20 &&
+            this.state.checked === true &&
+            this.state.checkedpt2 === false &&
+            this.state.thoughtForCampus !== "" &&
+            this.state.stringSix !== "") {
+                this.setState({
+                    success: true
+                })
+            }
+    }
+
+    finish (event) {
+        this.setState({
+            success: false
+        })
+        alert("Thank you so much for your help! Have a great day! :) You can close the window now!");
     }
 
 
@@ -201,7 +222,7 @@ class Map extends Component {
                              onClose={this.closeModalTwo}
                             >
                                 <div className="modalBackground">
-                                    <img src="https://openweathermap.org/themes/openweathermap/assets/img/new-history-forecast-bulk.png" alt="weather" width="100%" height="100%"></img>
+                                    <img src="https://openweathermap.org/themes/openweathermap/assets/img/new-history-forecast-bulk.png" alt="weather" width="100%" height="300px"></img>
                                     <div className="interModalDialogBox"><h2>How's the weather? </h2></div>
                                     <TextField id="modalTwoAnswer" variant="outlined" label="Answer here!" onChange={this.actionModalTwoReg}></TextField>
                                     <Button id="modalTwoRegBtn" size="large" variant="outlined" onClick={this.closeModalTwo}><h3>Submit My Answer</h3></Button>
@@ -212,7 +233,7 @@ class Map extends Component {
                              onClose={this.closeModalTwo}
                             >
                                 <div className="modalBackground">
-                                    <img src="https://i.redd.it/6361c94kl6i21.jpg" alt="weather-meme" width="100%" height="100%"></img>
+                                    <img src="https://i.redd.it/6361c94kl6i21.jpg" alt="weather-meme" position="center" width="60%" height="700px"></img>
                                     <div className="interModalDialogBox"><h2>How's the weather? </h2></div>
                                     <TextField id="modalTwoAnswer" variant="outlined" label="Answer here!" onChange={this.actionModalTwoReg}></TextField>
                                     <Button id="modalTwoMemeBtn" size="large" variant="outlined" onClick={this.closeModalTwo}><h3>Submit My Answer</h3></Button>
@@ -260,7 +281,7 @@ class Map extends Component {
                              onClose={this.closeModalOne}
                              >
                                 <div className="modalBackground">
-                                    <img src="https://chemistry.illinois.edu/sites/default/files/inline-images/uiuc%20campus_0.png" alt="campus" width="100%" height="100%"></img>
+                                    <img src="https://chemistry.illinois.edu/sites/default/files/inline-images/uiuc%20campus_0.png" alt="campus" width="100%" height="500px"></img>
                                     <div className="interModalDialogBox"> <h2> What do you think of our campus?</h2></div>
                                     <TextField id="modalOneAnswer" variant="outlined" label="answer here" onChange={this.actionModalOneReg} ></TextField>
                                     <Button id="modalOneRegBtn" size="large" variant="outlined" onClick={this.closeModalOne}> <h3>Submit My Thought</h3></Button>
@@ -271,7 +292,7 @@ class Map extends Component {
                              onClose={this.closeModalOne}
                             >
                                 <div className="modalBackground">
-                                    <img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/91026879_10163216068680125_8930716590257733632_n.jpg?_nc_cat=111&_nc_sid=ca434c&_nc_ohc=h1YuNUdyPOcAX8ky6y-&_nc_ht=scontent-ort2-1.xx&oh=bf2cb3314f9953682312447e656a0b1c&oe=5EA78F8D" alt="campus-meme" width="100%" height="100%"></img>
+                                    <img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/91026879_10163216068680125_8930716590257733632_n.jpg?_nc_cat=111&_nc_sid=ca434c&_nc_ohc=h1YuNUdyPOcAX8ky6y-&_nc_ht=scontent-ort2-1.xx&oh=bf2cb3314f9953682312447e656a0b1c&oe=5EA78F8D" alt="campus-meme" width="100%" height="500px"></img>
                                     <div className="interModalDialogBox"><h2>What do you think of our campus?</h2></div>
                                     <TextField id="modalOneAnswer" variant="outlined" label="answer here" onChange={this.actionModalOneReg} ></TextField>
                                     <Button id="modalOneRegBtn" size="large" variant="outlined" onClick={this.closeModalOne}> <h3>Submit My Thought</h3></Button>
@@ -285,6 +306,24 @@ class Map extends Component {
                     </div>
                     <div className="container-grid">
                         <Button id="final" size="large" variant="contained" color="secondary" onClick={this.finalAction}> <h2>Finish</h2></Button>   
+                        <Modal 
+                         open={this.state.finished && this.state.success}
+                         onClose={this.finish}
+                        >
+                            <div className="modalBackground">
+                                <img src="https://img.women.com/images/images/000/077/301/large/E.T..jpg?1489354835" alt="cute-et" width="100%" height="300px"></img>
+                                <Button size="large" variant="outlined" onClick={this.finish}><h2>Click Here To Exit! Bye Bye!</h2></Button>
+                            </div>
+                        </Modal>
+                        <Modal 
+                         open={this.state.finished && !this.state.success}
+                         onClose={this.finish}
+                        >
+                            <div className="modalBackground">
+                                <img src="https://lh3.googleusercontent.com/proxy/YAw5Z6Q_WHFjyeVLMMtHMFSvsnrdJfSTK3zkvUxnEEnq_Y7r4UuSpdccAqIs5QG9QRMe_IDd1gtNV_CuyLe1l6jSdp8DbonAWZBfB7FGTCINe33SGf-_AH8" alt="cute-et" width="100%" height="500px"></img>
+                                <Button size="large" variant="outlined" onClick={this.finish}><h2>Click Here To Exit! Bye Bye!</h2></Button>
+                            </div>
+                        </Modal>
                     </div>
                 </div>
             )
