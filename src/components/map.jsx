@@ -247,7 +247,7 @@ class Map extends Component {
                         </div>
                         <div className="item-odd" id="two">
                             <TextField id="second-input" variant="outlined" label="type here" onChange={this.actionTwo}></TextField>
-                            <Button id="second" size="medium" variant="outlined" color="secondary"> <h3>2: Enter</h3></Button>
+                            <Button id="second" size="medium" variant="outlined" color="secondary"> <h3>2</h3></Button>
                         </div>
                         <div className="item-even" id="thr">
                             <InputLabel id="demo-simple-select-outlined-label">Number</InputLabel>
@@ -265,7 +265,7 @@ class Map extends Component {
                             <MenuItem value={20}>20</MenuItem>
                             <MenuItem value={30}>30</MenuItem>
                             </Select>
-                            <Button id="third" size="medium" variant="outlined" color="secondary"> <h3>3: Select</h3></Button>
+                            <Button id="third" size="medium" variant="outlined" color="secondary"> <h3>3</h3></Button>
                         </div>
                         <div className="item-odd" id="fou">
                             <Checkbox
@@ -307,7 +307,7 @@ class Map extends Component {
                         </div>
                         <div className="item-odd" id="six">
                             <TextField id="sixth-input" variant="outlined" label="enter here!" onChange={this.actionSix}></TextField>
-                            <Button id="sixth" size="large" variant="outlined" color="secondary"> <h2>6: Done</h2></Button>
+                            <Button id="sixth" size="large" variant="outlined" color="secondary"> <h2>6</h2></Button>
                         </div>
                     </div>
                     <div className="container-grid">

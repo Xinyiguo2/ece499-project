@@ -1,0 +1,19 @@
+Hello, welcome to the adventure in turtle-land with me. I’m your guide and please follow my instructions to get through the tasks ahead. there will be 6 tasks and it would only take 5 minutes. you are assigned to number []. please click on number [] below. 
+
+You could see 6 numbered buttons on the page. 
+
+Now please click on the button with number 1 written on it. 
+
+PLease answer the question and type your answer in the text box. After you do so, please click ‘Submit my answer’.
+
+Now please type ‘INI’ all in capital in the text field above the button with number 2 written on it. ‘INI’. Please click the button with number 2 written on it once you finish typing.
+
+Now please select number 20 from the dropdown menu that is above the button with number 3 written on it. And please click the button with number 3 on it after you select the number.
+
+Now please check both checkboxes above the fourth button. Now please uncheck the bottom button, and please click the button with number 4 written on it.
+
+Now please click on the button with 5 written on it. Please again, answer the question and type your answer in the text field. Once you finish typing, please click the “Submit my thought” button. Content can be any thought on anything.
+
+For the last task, please type your email address in the textbox above the button with number 6 written on it. We’ll put your email in a raffle for homemade cookies. Once you finish typing your email, please click on the button with number 6. 
+
+Thank you so much for your cooperation here! You’ve completed all six tasks and now please click on the button with finish written on it. Have a great day and Thank you so much again! 
