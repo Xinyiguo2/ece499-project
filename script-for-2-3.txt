@@ -1,8 +1,8 @@
 script  - 3 
 Hello, welcome to the adventure in turtle-land with me. My name is Miss Turtle, and I’ll be your guide on your way out. It’s nice to e-meet you and hope we’ll have a fun time together! 
 The whole adventure would take no more than 10 minutes and all you have to do is follow my instruction. If you have any questions, please don’t be afraid to ask. We may not meet each other in person, but I guarantee you that I know what I’m doing here and I’m trying to offer all the help you need. Are you ready? Let’s get it! 
-Before you joined me, I’ve asked the crystal ball what is your lucky number on this adventure, and the answer I received is []
-So please click on the number [] below. 
+Before you joined me, I’ve asked the crystal ball what is your lucky number on this adventure, and the answer I received is 2
+So please click on the number 2 below. 
 
 Alright, now we are here at the beginning of the Scavenger hunt. 
 on this page, you could see 6 boxes,right? Each box here means a task that you should complete. As you can see, there’s no instruction written on the page, so I’ll be the guide here and I’ll make sure you know enough to finish the whole adventure. 

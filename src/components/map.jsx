@@ -127,7 +127,7 @@ class Map extends Component {
     }
 
     modalActionTwo (event) {
-        if (this.state.selectedMode === 3) { // 3 is for convsersation 
+        if (this.state.selectedMode === 2) { // 3 is for convsersation 
             this.setState({
                 clickedForModalTwoConversation: true
             })
@@ -204,12 +204,7 @@ class Map extends Component {
                             <Button id="2" variant="outlined" color="secondary" onClick={this.selectModeTwo}>
                                 2
                             </Button>
-                        </div>
-                        <div className="container-inside">
-                            <Button id="3" variant="outlined" onClick={this.selectModeThree}>
-                                3
-                            </Button>
-                        </div>
+                        </div>  
                     </div>
                 </div>
             )

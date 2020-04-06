@@ -10,3 +10,19 @@ on first landing, the robot will talk to the user for a pre-defined selected mod
 
 - if user follows the instructions correctly, it will shows a cute robot ET pic 
 - otherwise, it'd be a scary robot pic
+
+
+procedure:
+- send link to the user thru google hangout, join the user in the meeting
+- send over link for pre-survey, ask the user to fill it in 
+- ask the user to share screen, send over adventure link, start experiment one 
+- send over middle survey link, ask the user to fill it in
+- ask the user to share screen again, send over the adventure link, start experiment two 
+- send over post survey link, ask the user to fill it in
+
+
+links:
+- pre survey: https://forms.gle/u1i7mjAeSFBgnfae6
+- middle survey: https://forms.gle/SeFZbHbvDJikfyPQ8
+- post survey: https://forms.gle/zBB4g6WfE8WYqcHC6
+- online adventure: xinyiguo2.github.io/ece499-project

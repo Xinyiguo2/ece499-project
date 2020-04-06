@@ -1,4 +1,4 @@
-Hello, welcome to the adventure in turtle-land with me. I’m your guide and please follow my instructions to get through the tasks ahead. there will be 6 tasks and it would only take 5 minutes. you are assigned to number []. please click on number [] below. 
+Hello, welcome to the adventure in turtle-land with me. I’m your guide and please follow my instructions to get through the tasks ahead. there will be 6 tasks and it would only take 5 minutes. you are assigned to number 1. please click on number 1 below. 
 
 You could see 6 numbered buttons on the page. 
 
