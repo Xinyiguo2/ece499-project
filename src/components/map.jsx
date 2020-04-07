@@ -223,7 +223,7 @@ class Map extends Component {
                             >
                                 <div className="modalBackground">
                                     <img src="https://openweathermap.org/themes/openweathermap/assets/img/new-history-forecast-bulk.png" alt="weather" width="100%" height="300px"></img>
-                                    <div className="interModalDialogBox"><h2>How's the weather? </h2></div>
+                                    <div className="interModalDialogBox"><h2>What's your favorite season? </h2></div>
                                     <TextField id="modalTwoAnswer" variant="outlined" label="Answer here!" onChange={this.actionModalTwoReg}></TextField>
                                     <Button id="modalTwoRegBtn" size="large" variant="outlined" onClick={this.closeModalTwo}><h3>Submit My Answer</h3></Button>
                                 </div>
@@ -283,7 +283,7 @@ class Map extends Component {
                              >
                                 <div className="modalBackground">
                                     <img src="https://chemistry.illinois.edu/sites/default/files/inline-images/uiuc%20campus_0.png" alt="campus" width="100%" height="500px"></img>
-                                    <div className="interModalDialogBox"> <h2> What do you think of our campus?</h2></div>
+                                    <div className="interModalDialogBox"> <h2> Which dorm do you live in as a freshman?</h2></div>
                                     <TextField id="modalOneAnswer" variant="outlined" label="answer here" onChange={this.actionModalOneReg} ></TextField>
                                     <Button id="modalOneRegBtn" size="large" variant="outlined" onClick={this.closeModalOne}> <h3>Submit My Thought</h3></Button>
                                 </div>
